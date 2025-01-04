@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://impl.webservice.magfa.com/" xmlns:ns1="webservice.magfa.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns3="http://schemas.xmlsoap.org/soap/http" name="MagfaSoapServer" targetNamespace="http://impl.webservice.magfa.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>Magfa SOAP Service documentation</wsdl:documentation>
+  <wsdl:import namespace="webservice.magfa.com" location="https://sms.magfa.com/api/soap/sms/v2/server?wsdl=MagfaSoapServer.wsdl" />
+  <wsdl:types />
+  <wsdl:binding name="MagfaSoapServerSoapBinding" type="ns1:MagfaSoapServer">
+    <wsdl:documentation>Magfa SOAP Service bindings documentation </wsdl:documentation>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="messages">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="messages">
+        <soap:body use="literal" namespace="webservice.magfa.com" />
+      </wsdl:input>
+      <wsdl:output name="messagesResponse">
+        <soap:body use="literal" namespace="webservice.magfa.com" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mid">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="mid">
+        <soap:body use="literal" namespace="webservice.magfa.com" />
+      </wsdl:input>
+      <wsdl:output name="midResponse">
+        <soap:body use="literal" namespace="webservice.magfa.com" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="statuses">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="statuses">
+        <soap:body use="literal" namespace="webservice.magfa.com" />
+      </wsdl:input>
+      <wsdl:output name="statusesResponse">
+        <soap:body use="literal" namespace="webservice.magfa.com" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="send">
+        <soap:body use="literal" namespace="webservice.magfa.com" />
+      </wsdl:input>
+      <wsdl:output name="sendResponse">
+        <soap:body use="literal" namespace="webservice.magfa.com" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="balance">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="balance">
+        <soap:body use="literal" namespace="webservice.magfa.com" />
+      </wsdl:input>
+      <wsdl:output name="balanceResponse">
+        <soap:body use="literal" namespace="webservice.magfa.com" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MagfaSoapServer">
+    <wsdl:port name="MagfaSoapServer" binding="tns:MagfaSoapServerSoapBinding">
+      <soap:address location="https://sms.magfa.com/api/soap/sms/v2/server" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
