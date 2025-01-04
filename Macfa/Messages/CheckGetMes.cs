@@ -19,7 +19,7 @@ namespace Macfa.Messages
         public Task Execute(IJobExecutionContext context)
         {
             string username = "itqazvin";
-            string password = "DGRrsmBjyCivvZox";
+            string password = "";
             string domain = "GHSMS";
             // Service (Add a Web Reference)
             MagfaSoapServer service = new MagfaSoapServer();
@@ -33,7 +33,7 @@ namespace Macfa.Messages
             // Call
             int count = 100;
             string shortNumber = "";
-            messagesResult result = service.messages(count, "300071281");
+            messagesResult result = service.messages(count, "");
             if (result.status != 0)
             {
                 Console.WriteLine("error: " + result.status);
