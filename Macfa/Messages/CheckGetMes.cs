@@ -18,9 +18,9 @@ namespace Macfa.Messages
         private StoreDb db = new StoreDb();
         public Task Execute(IJobExecutionContext context)
         {
-            string username = "itqazvin";
+            string username = "";
             string password = "";
-            string domain = "GHSMS";
+            string domain = "";
             // Service (Add a Web Reference)
             MagfaSoapServer service = new MagfaSoapServer();
             // Basic Auth
